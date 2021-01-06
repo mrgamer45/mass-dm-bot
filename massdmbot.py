@@ -14,7 +14,10 @@ async def massdm(ctx, *, message):
                 if member != ctx.author.id:
                     channel = await member.create_dm()
                     await channel.send(message)
-                    await ctx.send(f'Successfully dmed {member}!')
+                    await ctx.send(f':white_check_mark: Successfully dmed {member}!')
 			except:
-				await ctx.send(f'Could not dm {member}')
+				await ctx.send(f':x: Could not dm {member}')
+@client.command()
+async def servers(ctx):
+    await ctx.send(f"I am currently in `{len(client.guilds)}` servers")
 client.run(token)
