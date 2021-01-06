@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 intents=discord.Intents.all()
 client = commands.Bot(command_prefix='.', intents=intents)
-token = 'NzgwNTI0MTg1NDgyNTU5NTA5.X7wVyw.Jz4R3JHOgtsGSPUdvCP8hP31Ykw'
+token = ''
 @client.event
 async def on_ready():
 	print('logged in successfully!')
